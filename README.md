@@ -18,7 +18,7 @@ git clone https://github.com/Pansamic/FeeTech_2D_Gimbal
 
 将二位云台末端的电机（控制上下的电机）插入驱动板并将驱动板上的microUSB插口连接windows电脑，如下图所示。
 
-![connection](./figure/00.png)
+![connection](./figure/00.jpg)
 
 打开本项目根目录下的`FD.exe`，如下图。选择波特率为1000000，打开串口。
 
@@ -39,6 +39,8 @@ git clone https://github.com/Pansamic/FeeTech_2D_Gimbal
 
 ## :hand: 示例程序
 
+在示例程序中，二维云台会摆头，如果在云台上加上激光笔，可以看到激光笔**画圆**。
+
 ### Linux
 
 ```shell
@@ -49,11 +51,6 @@ make
 #'/dev/ttyUSB0'替换成实际连接电机驱动板的串口设备
 sudo ./gimbal_demo /dev/ttyUSB0 
 ```
-
-在示例程序中，二维云台的两个电机会
-
-
-
 
 ### STM32
 
