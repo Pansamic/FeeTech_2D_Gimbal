@@ -34,8 +34,8 @@ void Gimbal_SetAngle(float YawAngle, float PitchAngle)
 	 * @param Velocity motor rotate in speed of 2400(unknown unit)
 	 * @param Acceleration rotating acceleration
 	*/
-	ServoDriver.WritePosEx(1, Servo1Res, 4000, 500);
-	ServoDriver.WritePosEx(2, Servo2Res, 4000, 500);
+	ServoDriver.WritePosEx(1, Servo1Res, 4000, 244);
+	ServoDriver.WritePosEx(2, Servo2Res, 4000, 244);
 }
 
 /**
@@ -52,7 +52,7 @@ void Gimbal_SetYaw(float Angle)
 	 * @param Velocity motor rotate in speed of 2400(unknown unit)
 	 * @param Acceleration rotating acceleration
 	*/
-	ServoDriver.WritePosEx(1, ServoRes, 4000, 500);
+	ServoDriver.WritePosEx(1, ServoRes, 4000, 244);
 }
 
 
@@ -70,5 +70,14 @@ void Gimbal_SetPitch(float Angle)
 	 * @param Velocity motor rotate in speed of 2400(unknown unit)
 	 * @param Acceleration rotating acceleration
 	*/
-	ServoDriver.WritePosEx(1, ServoRes, 4000, 500);}
+	ServoDriver.WritePosEx(1, ServoRes, 4000, 244);
+}
 
+
+/**
+ * @brief release the serial port
+*/
+void Gimbal_Release(void)
+{
+	ServoDriver.end();
+}

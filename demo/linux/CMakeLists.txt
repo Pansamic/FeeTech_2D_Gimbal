@@ -1,14 +1,17 @@
-cmake_Minimum_required(VERSION 2.8.3)
-set(project "FeeTech_2D_Gimbal")
+cmake_Minimum_required(VERSION 2.8.13)
+set(project "gimbal_test")
 project(${project})
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O3")
 
-include_directories(../../linux)
-link_directories(../../linux)
-link_libraries(../../linux/libSCServo.a)
+include_directories(../../linux/)
+link_directories(../../linux/)
+# link_lsibraries(../../linux/libSCServo.a)
 
-file(GLOB hdrs *h)
-file(GLOB srs *.cpp)
+file(GLOB hdrs ../../linux/*.h)
+file(GLOB srs ../../linux/*.cpp)
 
-add_executable(${project} ${hdrs} ${srs})
+message(STATUS "hdrs: ${hdrs}")
+message(STATUS "srs: ${srs}")
+
+add_executable(${project} main.cpp ${hdrs} ${srs})
