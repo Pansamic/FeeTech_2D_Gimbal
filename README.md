@@ -46,7 +46,8 @@ git clone https://github.com/Pansamic/FeeTech_2D_Gimbal
 ```shell
 git clone https://github.com/Pansamic/FeeTech_2D_Gimbal
 cd FeeTech_2D_Gimbal/demo/linux
-cmake .
+mkdir build && cd build
+cmake ..
 make
 #'/dev/ttyUSB0'替换成实际连接电机驱动板的串口设备
 sudo ./gimbal_demo /dev/ttyUSB0 
