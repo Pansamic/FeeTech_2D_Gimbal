@@ -4,12 +4,11 @@ project(${project})
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -O3")
 
-include_directories(../../linux/)
-link_directories(../../linux/)
-# link_lsibraries(../../linux/libSCServo.a)
+include_directories(./inc)
+link_directories(./src)
 
-file(GLOB hdrs ../../linux/*.h)
-file(GLOB srs ../../linux/*.cpp)
+file(GLOB hdrs ./inc/*.h)
+file(GLOB srs ./src/*.cpp)
 
 message(STATUS "hdrs: ${hdrs}")
 message(STATUS "srs: ${srs}")
