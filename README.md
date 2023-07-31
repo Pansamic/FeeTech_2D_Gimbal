@@ -67,6 +67,12 @@ sudo ./gimbal_demo /dev/ttyUSB0
 
 `void Gimbal_SetAngle(float YawAngle, float PitchAngle)`
 
+`void Gimbal_SetYaw(float Angle)`
+
+`void Gimbal_SetPitch(float Angle)`
+
+`void Gimbal_Release(void)`
+
 ### STM32
 
 ### Tiva
