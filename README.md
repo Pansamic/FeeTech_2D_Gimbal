@@ -56,7 +56,7 @@ git clone https://github.com/Pansamic/FeeTech_2D_Gimbal
 
 ```shell
 git clone https://github.com/Pansamic/FeeTech_2D_Gimbal
-cd FeeTech_2D_Gimbal/demo/linux
+cd FeeTech_2D_Gimbal/linux
 mkdir build && cd build
 cmake ..
 make
